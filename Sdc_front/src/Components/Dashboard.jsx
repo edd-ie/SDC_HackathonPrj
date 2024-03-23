@@ -88,8 +88,25 @@ export default function Dashboard() {
         fetch(`http://localhost:5000/${idName}`)
         .then(res => res.json())
         .then(data => {
-            console.log(data);
-            setData(data)
+            console.log(data[0]);
+            let name = "";
+            let uv = 0;
+            let pv = 0;
+            let dataset = [];
+            
+            // "name": "Transportation",
+            // "uv": 3490,
+            // "pv": 4300,
+            // "amt": 2100
+
+            const dataArray = Object.entries(data).map(([name, value]) => ({
+                name,
+                uv: value.emission,
+                pv: value.offset
+                })
+            );
+            console.log(dataArray);
+            setData(dataArray);
         })
         
     }

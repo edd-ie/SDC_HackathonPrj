@@ -458,5 +458,51 @@
             "emission": 5380,
             "offset": 8280
         }
-    }
+    },
+    "total": {
+            "2013": {
+                "Emission": 43087,
+                "Offset": 36013
+            },
+            "2014": {
+                "Emission": 65111,
+                "Offset": 43705
+            },
+            "2015": {
+                "Emission": 58529,
+                "Offset": 21671
+            },
+            "2016": {
+                "Emission": 64729,
+                "Offset": 58282
+            },
+            "2017": {
+                "Emission": 55091,
+                "Offset": 71698
+            },
+            "2018": {
+                "Emission": 44605,
+                "Offset": 48304
+            },
+            "2019": {
+                "Emission": 47949,
+                "Offset": 45207
+            },
+            "2020": {
+                "Emission": 59149,
+                "Offset": 59149
+            },
+            "2021": {
+                "Emission": 55257,
+                "Offset": 52890
+            },
+            "2022": {
+                "Emission": 53177,
+                "Offset": 68641
+            },
+            "2023": {
+                "Emission": 57530,
+                "Offset": 47639
+            }
+        }
 }
