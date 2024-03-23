@@ -2,10 +2,6 @@ import json
 from flask import Flask, jsonify, request
 import os
 from flask_cors import CORS
-<<<<<<< HEAD
-=======
-# import predictons
->>>>>>> 849cc246e6cfe132a141f2ecae27737001783de0
 
 app = Flask(__name__)
 CORS(app)
