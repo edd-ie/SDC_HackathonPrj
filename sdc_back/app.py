@@ -2,7 +2,6 @@ import json
 from flask import Flask, jsonify, request
 import os
 from flask_cors import CORS
-import predictons
 
 app = Flask(__name__)
 CORS(app)
@@ -30,13 +29,13 @@ def loadJsonFiles(sector):
 def index():
     return "This is the base route"
 
-@app.route('/<sector>')
-def get_agriculture_json(sector):
+@app.route('/sector/<sectorName>')
+def get_agriculture_json(sectorName):
     # Check if file exists in the json_files dictionary
     # return loadJsonFiles("agriculture")
-    if(sector != "agriculture" and sector != "commercial" and sector != "energy" and sector != "aviation" and sector != "forestry" and sector != "industrial" and sector != "marine" and sector != "residential" and sector != "transporation" and sector != "waste"):
+    if(sectorName != "agriculture" and sectorName != "commercial" and sectorName != "energy" and sectorName != "aviation" and sectorName != "forestry" and sectorName != "industrial" and sectorName != "marine" and sectorName != "residential" and sectorName != "transporation" and sectorName != "waste"):
         return "Invalid route"
-    return loadJsonFiles(sector)
+    return loadJsonFiles(sectorName)
 
 if __name__ == "__main__":
     app.run(debug=True)
