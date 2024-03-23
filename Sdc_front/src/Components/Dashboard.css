@@ -109,3 +109,25 @@
     padding: 0;
     font-size: 20px;
 }
+
+.head{
+    position: absolute;
+    top: 10px;
+    left: 35vw;
+    padding: 0;
+    margin: 0;
+    width: 300px;
+    height: 50px;
+    color: rgb(14, 13, 13);
+    border-radius: 15px;
+    background: rgb(231, 230, 230);
+    text-align: center;
+    align-items: center;
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+.Label{
+    text-align: center;
+    text-decoration: underline;
+}

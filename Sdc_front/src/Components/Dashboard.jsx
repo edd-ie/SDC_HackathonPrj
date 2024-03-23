@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useState } from "react";
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts";
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, LabelList, Label } from "recharts";
 import './Dashboard.css'
 
 
@@ -29,8 +29,8 @@ export default function Dashboard() {
 
             const dataArray = Object.entries(data).map(([name, value]) => ({
                 name,
-                uv: value.emission,
-                pv: value.offset
+                emissions: value.emission,
+                offset: value.offset
                 })
             );
             console.log(dataArray);
@@ -47,8 +47,8 @@ export default function Dashboard() {
 
             const dataArray = Object.entries(data).map(([name, value]) => ({
                 name,
-                uv: value.emission,
-                pv: value.offset
+                emissions: value.emission,
+                offset: value.offset
                 })
             );
             console.log(dataArray);
@@ -70,8 +70,8 @@ export default function Dashboard() {
 
                 const dataArray = Object.entries(data).map(([name, value]) => ({
                     name,
-                    uv: value.emission,
-                    pv: value.offset
+                    emissions: value.emission,
+                    offset: value.offset
                     })
                 );
                 console.log(dataArray);
@@ -93,7 +93,7 @@ export default function Dashboard() {
                 console.log(data);
                 const dataArray = Object.entries(data).map(([name, value]) => ({
                     name,
-                    uv: value.toFixed(2)
+                    emissions: value.toFixed(2)
                     })
                 );
                 console.log(dataArray);
@@ -102,11 +102,16 @@ export default function Dashboard() {
         }
     }
 
+    let money = {}
+
+    const finance = 0
 
 
 
     return (
     <div className="Dashboard">
+
+        <div className="head">Irvine Carbon Dataset</div>
         
         {!flip ? 
         <div className="folder">
@@ -126,9 +131,11 @@ export default function Dashboard() {
             <YAxis />
             <CartesianGrid strokeDasharray="3 3" />
             <Tooltip />
-            <Area type="monotone" dataKey="uv" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
-            <Area type="monotone" dataKey="pv" stroke="#82ca9d" fillOpacity={1} fill="url(#colorPv)" />
+            <Area type="monotone" dataKey="emissions" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
+            <Area type="monotone" dataKey="offset" stroke="#82ca9d" fillOpacity={1} fill="url(#colorPv)" />
             </AreaChart>
+
+            <h3 className="Label">Sector Emissions</h3>
             
             <div className="tabs">
                 <div id="total" className="switch active" onClick={handleData} >Total</div>
@@ -147,25 +154,32 @@ export default function Dashboard() {
         : 
             <div className="folder">
                 {future ? 
-                    <AreaChart className="chart" width={700} height={250} data={data}
+                    <>
+                        <AreaChart className="chart" width={700} height={250} data={data}
                         margin={{ top: 10, right: 0, left: 0, bottom: 0 }}>
-                        <defs>
-                            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="5%" stopColor="#8884d8" stopOpacity={0.9}/>
-                            <stop offset="95%" stopColor="#8884d8" stopOpacity={0}/>
-                            </linearGradient>
-                            <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8}/>
-                            <stop offset="95%" stopColor="#82ca9d" stopOpacity={0}/>
-                            </linearGradient>
-                        </defs>
-                        <XAxis dataKey="name" />
-                        <YAxis />
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <Tooltip />
-                        <Area type="monotone" dataKey="uv" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
-                        <Area type="monotone" dataKey="pv" stroke="#82ca9d" fillOpacity={1} fill="url(#colorPv)" />
-                    </AreaChart>
+                            <Label value="Pages of my website" offset={0} position="top" />
+                            <defs>
+                                <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="5%" stopColor="#8884d8" stopOpacity={0.9}/>
+                                <stop offset="95%" stopColor="#8884d8" stopOpacity={0}/>
+                                </linearGradient>
+                                <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8}/>
+                                <stop offset="95%" stopColor="#82ca9d" stopOpacity={0}/>
+                                </linearGradient>
+                                
+                            </defs>
+                            <XAxis dataKey="name" />
+                            
+                            <YAxis />
+                            <CartesianGrid strokeDasharray="3 3" />
+                            <Tooltip />
+                            <Area type="monotone" dataKey="emissions" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
+                            <Area type="monotone" dataKey="offset" stroke="#82ca9d" fillOpacity={1} fill="url(#colorPv)" />
+                        </AreaChart>
+                        <h3 className="Label">2024 Forecasted Sector Emissions</h3>
+                    </>
+
                 : <div></div>}
             </div>
         }
