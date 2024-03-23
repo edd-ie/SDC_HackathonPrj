@@ -32,9 +32,9 @@ def index():
 
 @app.route('/<sector>')
 def get_agriculture_json(sector):
-    # Check if file exists in the json_files dictionary
+    # Check if file exists in the json_files dictionarys
     # return loadJsonFiles("agriculture")
-    if(sector != "agriculture" and sector != "commercial" and sector != "energy" and sector != "aviation" and sector != "forestry" and sector != "industrial" and sector != "marine" and sector != "residential" and sector != "transportation" and sector != "waste"):
+    if(sector != "agriculture" and sector != "commercial" and sector != "energy" and sector != "aviation" and sector != "forestry" and sector != "industrial" and sector != "marine" and sector != "residential" and sector != "transportation" and sector != "waste" and sector != "total"):
         return "Invalid route"
     return loadJsonFiles(sector)
 
