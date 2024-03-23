@@ -18,7 +18,7 @@ def get_agriculture_json():
     if 'agriculture' in json_files:
         
         json_file_path = json_files['agriculture']
-        print(f"File path: {json_file_path}")  # Print the file path
+        # print(f"File path: {json_file_path}")  # Print the file path
 
         # If file exists
         if os.path.exists(json_file_path):
