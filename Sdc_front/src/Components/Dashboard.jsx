@@ -82,8 +82,8 @@ export default function Dashboard() {
     return (
     <div className="Dashboard">
         <div className="folder">
-            <AreaChart width={700} height={250} data={data}
-            margin={{ top: 0, right: 0, left: 0, bottom: 0 }}>
+            <AreaChart position='relative' width={700} height={250} data={data}
+            margin={{ top: 10, right: 0, left: 0, bottom: 0 }}>
             <defs>
                 <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8}/>
@@ -101,6 +101,19 @@ export default function Dashboard() {
             <Area type="monotone" dataKey="uv" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
             <Area type="monotone" dataKey="pv" stroke="#82ca9d" fillOpacity={1} fill="url(#colorPv)" />
             </AreaChart>
+            
+            <div className="tabs">
+                <div className="switch active">Agriculture</div>
+                <div className="switch">Aviation</div>
+                <div className="switch">Commercial</div>
+                <div className="switch">Energy</div>
+                <div className="switch">Forestry</div>
+                <div className="switch">Industrial</div>
+                <div className="switch">Marine</div>
+                <div className="switch">Residential</div>
+                <div className="switch">Transportation</div>
+                <div className="switch">Waste</div>
+            </div>
         </div>
         
     </div>
