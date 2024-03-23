@@ -2,7 +2,7 @@ import json
 from flask import Flask, jsonify, request
 import os
 from flask_cors import CORS
-import predictons
+# import predictons
 
 app = Flask(__name__)
 CORS(app)
@@ -34,7 +34,7 @@ def index():
 def get_agriculture_json(sector):
     # Check if file exists in the json_files dictionary
     # return loadJsonFiles("agriculture")
-    if(sector != "agriculture" and sector != "commercial" and sector != "energy" and sector != "aviation" and sector != "forestry" and sector != "industrial" and sector != "marine" and sector != "residential" and sector != "transporation" and sector != "waste"):
+    if(sector != "agriculture" and sector != "commercial" and sector != "energy" and sector != "aviation" and sector != "forestry" and sector != "industrial" and sector != "marine" and sector != "residential" and sector != "transportation" and sector != "waste"):
         return "Invalid route"
     return loadJsonFiles(sector)
 

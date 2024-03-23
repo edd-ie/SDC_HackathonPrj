@@ -12,12 +12,12 @@
     position: relative;
     margin-top: 10%;
     margin-left: 10%;
-    width: 90%;
+    width: 720px;
     height: 70%;
     background: rgb(231, 230, 230);
     display: flex;
     flex-direction: column;
-    border-top-left-radius: 15px;
+    border-radius: 15px;
     justify-content: space-between;
     padding-top: 20px;
 }
@@ -25,8 +25,7 @@
 
 .tabs{
     position: relative;
-    width: 90%;
-    width: 700px;
+    width: 720px;
     border-top: 1px solid black;
     border-left: 1px solid black;
     background: transparent;
@@ -39,7 +38,7 @@
     position: relative;
     background: rgb(26, 25, 25);
     height: 15px;
-    width: 70px;
+    width: 80px;
     border-right: 1px solid rgb(177, 174, 174);
     font-size: 11px;
     text-align: center;
