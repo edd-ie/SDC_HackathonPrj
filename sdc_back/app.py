@@ -1,10 +1,13 @@
 import json
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, Blueprint, render_template, session, abort
 import os
 from flask_cors import CORS
+from predictons import app
 
-app = Flask(__name__)
-CORS(app)
+mainApp = Flask(__name__)
+mainApp.register_blueprint(app)
+
+CORS(mainApp)
 
 parent_directory = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
@@ -25,11 +28,11 @@ def loadJsonFiles(sector):
     else:
         return jsonify({'error': 'File not found'}), 404
 
-@app.route('/')
+@mainApp.route('/')
 def index():
     return "This is the base route"
 
-@app.route('/sector/<sectorName>')
+@mainApp.route('/sector/<sectorName>')
 def get_agriculture_json(sectorName):
     # Check if file exists in the json_files dictionary
     # return loadJsonFiles("agriculture")
@@ -38,5 +41,5 @@ def get_agriculture_json(sectorName):
     return loadJsonFiles(sectorName)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    mainApp.run(debug=True)
     
