@@ -19,17 +19,18 @@ def index():
             'marine' : get_prediction("marine"),
             'residential' : get_prediction("residential"),
             'transport' : get_prediction("transport"),
-            'waste' : get_prediction("waste"),}
+            'waste' : get_prediction("waste")}
     return json.dumps(data)
 
 def get_prediction(fileName):
-    df = pd.read_csv(f"CSVfiles/ForPrediction/{fileName}_pred.csv")
+    df = pd.read_csv(f"../CSVfiles/ForPrediction/{fileName}_pred.csv")
 
     #print(df)
     X = sm.add_constant(df["year"])  # Add constant term
     model = sm.OLS(df["emission"], X).fit()
 
     predicted_emission_2024 = model.predict([1, 2024])
-    returnVal = predicted_emission_2024
-    return predicted_emission_2024
+    return predicted_emission_2024[0]
     #print(f"Predicted carbon emission for 2024: ", predicted_emission_2024)
+
+print(get_prediction("aviation"))
