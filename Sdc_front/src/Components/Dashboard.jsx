@@ -102,9 +102,38 @@ export default function Dashboard() {
         }
     }
 
-    let money = {}
-
-    const finance = 0
+   const Table = ({ data }) => {
+        return (
+            <table>
+            <thead>
+                <tr>
+                <th>Sector</th>
+                <th>Company</th>
+                <th>Offset</th>
+                <th>Cost</th>
+                <th>Quantity</th>
+                <th>Emission Left</th>
+                </tr>
+            </thead>
+            <tbody>
+                {data.map((item) => (
+                <tr key={item.password}>
+                    <td>{item.firstname}</td>
+                    <td>{item.lastname}</td>
+                    <td>{item.email}</td>
+                    <td>{item.password}</td>
+                    <td>{item.sector}</td>
+                    <td>{item.company}</td>
+                    <td>{item.offset}</td>
+                    <td>{item.cost}</td>
+                    <td>{item.quantity}</td>
+                    <td>{item.left}</td>
+                </tr>
+                ))}
+            </tbody>
+            </table>
+        );
+    };
 
 
 
