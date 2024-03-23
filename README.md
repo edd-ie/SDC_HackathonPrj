@@ -16,4 +16,6 @@ Irvine Gasoline, a large-scale oil and gas company, has realized the detrimental
 
 ## How We Did It
 We utilized Flask Python for the backend to manage API endpoints and React for the frontend to create an interactive user interface. The backend includes routes for various endpoints, providing relevant JSON data to the frontend. The frontend features a line graph that visually represents the difference between emissions and offsets across different sectors.
+For prediction, we used the Statsmodels library in Python, which allows us to perform linear regression to predict future values based on historical data.
+
 
