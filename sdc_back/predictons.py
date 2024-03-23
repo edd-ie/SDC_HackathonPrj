@@ -10,20 +10,26 @@ app = Blueprint('predictions', __name__)
 
 @app.route('/prediction')
 def index():
-    return "This is the prediction route"
+    data = {'agriculture' : get_prediction("agriculture"),
+            'aviation' : get_prediction("aviation"),
+            'commercial' : get_prediction("commercial"),    
+            'energy' : get_prediction("energy"),
+            'forestry' : get_prediction("forestry"),
+            'industrial' : get_prediction("industrial"),
+            'marine' : get_prediction("marine"),
+            'residential' : get_prediction("residential"),
+            'transport' : get_prediction("transport"),
+            'waste' : get_prediction("waste"),}
+    return json.dumps(data)
 
-df = pd.read_csv('../CSVfiles/ForPrediction/agriculture_pred.csv')
+def get_prediction(fileName):
+    df = pd.read_csv(f"CSVfiles/ForPrediction/{fileName}_pred.csv")
 
-# columnsList = list(df.columns[1:])
-# columnsList = [int(year.split()[0]) for year in columnsList]
+    #print(df)
+    X = sm.add_constant(df["year"])  # Add constant term
+    model = sm.OLS(df["emission"], X).fit()
 
-# print(columnsList, "\n===========================================\n", list(df[df.columns[1]]))
-# print("\n===========================================\n", df.iloc[1])
-
-print(df)
-X = sm.add_constant(df["year"])  # Add constant term
-model = sm.OLS(df["emission"], X).fit()
-
-# Predict carbon emission for 2024
-predicted_emission_2024 = model.predict([1, 2024])
-print(f"Predicted carbon emission for 2024: ", predicted_emission_2024)
+    predicted_emission_2024 = model.predict([1, 2024])
+    returnVal = predicted_emission_2024
+    return predicted_emission_2024
+    #print(f"Predicted carbon emission for 2024: ", predicted_emission_2024)
