@@ -33,7 +33,7 @@ def index():
 def get_agriculture_json(sectorName):
     # Check if file exists in the json_files dictionary
     # return loadJsonFiles("agriculture")
-    if(sectorName != "agriculture" and sectorName != "commercial" and sectorName != "energy" and sectorName != "aviation" and sectorName != "forestry" and sectorName != "industrial" and sectorName != "marine" and sectorName != "residential" and sectorName != "transporation" and sectorName != "waste"):
+    if(sectorName != "agriculture" and sectorName != "commercial" and sectorName != "energy" and sectorName != "aviation" and sectorName != "forestry" and sectorName != "industrial" and sectorName != "marine" and sectorName != "residential" and sectorName != "transporation" and sectorName != "waste" and sectorName != "total"):
         return "Invalid route"
     return loadJsonFiles(sectorName)
 
