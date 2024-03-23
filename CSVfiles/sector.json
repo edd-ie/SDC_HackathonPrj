@@ -461,48 +461,48 @@
     },
     "total": {
             "2013": {
-                "Emission": 43087,
-                "Offset": 36013
+                "emission": 43087,
+                "offset": 36013
             },
             "2014": {
-                "Emission": 65111,
-                "Offset": 43705
+                "emission": 65111,
+                "offset": 43705
             },
             "2015": {
-                "Emission": 58529,
-                "Offset": 21671
+                "emission": 58529,
+                "offset": 21671
             },
             "2016": {
-                "Emission": 64729,
-                "Offset": 58282
+                "emission": 64729,
+                "offset": 58282
             },
             "2017": {
-                "Emission": 55091,
-                "Offset": 71698
+                "emission": 55091,
+                "offset": 71698
             },
             "2018": {
-                "Emission": 44605,
-                "Offset": 48304
+                "emission": 44605,
+                "offset": 48304
             },
             "2019": {
-                "Emission": 47949,
-                "Offset": 45207
+                "emission": 47949,
+                "offset": 45207
             },
             "2020": {
-                "Emission": 59149,
-                "Offset": 59149
+                "emission": 59149,
+                "offset": 59149
             },
             "2021": {
-                "Emission": 55257,
-                "Offset": 52890
+                "emission": 55257,
+                "offset": 52890
             },
             "2022": {
-                "Emission": 53177,
-                "Offset": 68641
+                "emission": 53177,
+                "offset": 68641
             },
             "2023": {
-                "Emission": 57530,
-                "Offset": 47639
+                "emission": 57530,
+                "offset": 47639
             }
         }
 }
