@@ -8,23 +8,29 @@ offset_providers_data = pd.DataFrame({
     'Cost': [1343, 1545, 998, 850, 1300, 803, 1203, 932, 650, 2980, 1832, 3240, 3480, 2342, 3240, 4579, 1343, 4329, 870, 4239]
 })
 
-# empty dictionary to store the optimal providers
-optimal_providers = {}
+# Initialize an empty list to store the optimal providers
+optimal_providers = []
 
-# group the data by sector
+# Group the data by sector
 grouped_data = offset_providers_data.groupby('Sector')
 
-# iterate through each sector
+# Loop through each sector
 for sector, group in grouped_data:
-    # sortthe providers by offset tons (descending) and cost (ascending)
+    # Sort the providers by offset tons (descending) and cost (ascending)
     sorted_providers = group.sort_values(by=['CO2OffsetTonnes', 'Cost'], ascending=[False, True])
     
-    # select the provider with the highest offset tons and lowest cost
+    # Select the provider with the highest offset tons and lowest cost
     top_provider = sorted_providers.iloc[0]  # Select the first row (highest offset tons, lowest cost)
     
-    # add the top provider to the optimal providers dictionary
-    optimal_providers[sector] = top_provider['Company Name']
+    # Add the sector, company name, and cost of the top provider to the list
+    optimal_providers.append({
+        'Sector': sector,
+        'Company Name': top_provider['Company Name'],
+        'Cost': top_provider['Cost']
+    })
 
-# printf
-for sector, provider in optimal_providers.items():
-    print(f"For the {sector} sector, the optimal provider is: {provider}.")
+# Create a DataFrame from the list of optimal providers
+optimal_providers_df = pd.DataFrame(optimal_providers)
+
+# Print the DataFrame
+print(optimal_providers_df)
