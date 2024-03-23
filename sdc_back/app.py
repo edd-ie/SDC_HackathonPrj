@@ -40,21 +40,21 @@ def get_agriculture_json(sectorName):
         return "Invalid route"
     return loadJsonFiles(sectorName)
 
-@mainApp.route('/sector/<tax>')
-def get_agriculture_json(sectorName):
-    # Check if file exists in the json_files dictionary
-    # return loadJsonFiles("agriculture")
-    if(sectorName != "taxInfo"):
-        return "Invalid route"
-    return loadJsonFiles(sectorName)
+# @mainApp.route('/sector/<tax>')
+# def get_agriculture_json(sectorName):
+#     # Check if file exists in the json_files dictionary
+#     # return loadJsonFiles("agriculture")
+#     if(sectorName != "taxInfo"):
+#         return "Invalid route"
+#     return loadJsonFiles(sectorName)
 
-@mainApp.route('/sector/<future>')
-def get_agriculture_json(sectorName):
-    # Check if file exists in the json_files dictionary
-    # return loadJsonFiles("agriculture")
-    if(sectorName != "offset_providers"):
-        return "Invalid route"
-    return loadJsonFiles(sectorName)
+# @mainApp.route('/sector/<future>')
+# def get_agriculture_json(sectorName):
+#     # Check if file exists in the json_files dictionary
+#     # return loadJsonFiles("agriculture")
+#     if(sectorName != "offset_providers"):
+#         return "Invalid route"
+#     return loadJsonFiles(sectorName)
 
 if __name__ == "__main__":
     mainApp.run(debug=True)
