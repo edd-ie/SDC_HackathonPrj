@@ -1,22 +1,60 @@
 .Dashboard{
     position: absolute;
-    background: rgb(199, 196, 196);
+    background: rgb(255, 249, 249);
     margin: 0;
     padding: 0;
     height: 100vh;
     width: 100vw;
-    
+    overflow: hidden;
 }
 
 .folder{
     position: relative;
-    margin-top: 5%;
+    margin-top: 10%;
     margin-left: 10%;
     width: 90%;
-    height: 90%;
-    background: green;
+    height: 70%;
+    background: rgb(231, 230, 230);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     border-top-left-radius: 15px;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+
+.tabs{
+    position: relative;
+    width: 90%;
+    width: 700px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    background: transparent;
+    display: flex;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.switch{
+    position: relative;
+    background: rgb(26, 25, 25);
+    height: 15px;
+    width: 70px;
+    border-right: 1px solid rgb(177, 174, 174);
+    font-size: 11px;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    border-bottom: 1px solid black;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.active{
+    background: white;
+    color: black;
+}
+
+.switch:hover{
+    background: gray;
 }
