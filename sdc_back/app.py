@@ -1,8 +1,11 @@
 import json
 from flask import Flask, jsonify, request
 import os
+from flask_cors import CORS
+import predictons
 
 app = Flask(__name__)
+CORS(app)
 
 parent_directory = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
@@ -16,10 +19,10 @@ def loadJsonFiles(sector):
         # Load the JSON data from file
         with open(jsonFilePath, 'r') as file:
             json_data = json.load(file)
-            agriculture = json_data[sector]
+            sectorJson = json_data[sector]
             # print(agriculture)
                 
-        return jsonify(agriculture)
+        return jsonify(sectorJson)
     else:
         return jsonify({'error': 'File not found'}), 404
 
@@ -37,3 +40,4 @@ def get_agriculture_json(sector):
 
 if __name__ == "__main__":
     app.run(debug=True)
+    
