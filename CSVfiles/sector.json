@@ -1,0 +1,462 @@
+{
+    "agriculture": {
+        "2013": {
+            "emission": 8811,
+            "offset": 5398
+        },
+        "2014": {
+            "emission": 7318,
+            "offset": 3261
+        },
+        "2015": {
+            "emission": 2210,
+            "offset": 121
+        },
+        "2016": {
+            "emission": 2820,
+            "offset": 6395
+        },
+        "2017": {
+            "emission": 7064,
+            "offset": 6011
+        },
+        "2018": {
+            "emission": 7111,
+            "offset": 6434
+        },
+        "2019": {
+            "emission": 4003,
+            "offset": 5946
+        },
+        "2020": {
+            "emission": 5703,
+            "offset": 9753
+        },
+        "2021": {
+            "emission": 1763,
+            "offset": 5039
+        },
+        "2022": {
+            "emission": 6367,
+            "offset": 6677
+        },
+        "2023": {
+            "emission": 5957,
+            "offset": 7353
+        }
+    },
+    "commercial": {
+        "2013": {
+            "emission": 3391,
+            "offset": 1441
+        },
+        "2014": {
+            "emission": 4222,
+            "offset": 5543
+        },
+        "2015": {
+            "emission": 8190,
+            "offset": 7266
+        },
+        "2016": {
+            "emission": 3962,
+            "offset": 2838
+        },
+        "2017": {
+            "emission": 1033,
+            "offset": 4094
+        },
+        "2018": {
+            "emission": 4344,
+            "offset": 3752
+        },
+        "2019": {
+            "emission": 1888,
+            "offset": 690
+        },
+        "2020": {
+            "emission": 8042,
+            "offset": 4059
+        },
+        "2021": {
+            "emission": 8339,
+            "offset": 9745
+        },
+        "2022": {
+            "emission": 6675,
+            "offset": 9057
+        },
+        "2023": {
+            "emission": 5804,
+            "offset": 2176
+        }
+    },
+    "energy": {
+        "2013": {
+            "emission": 4158,
+            "offset": 1380
+        },
+        "2014": {
+            "emission": 8232,
+            "offset": 1318
+        },
+        "2015": {
+            "emission": 7487,
+            "offset": 58
+        },
+        "2016": {
+            "emission": 6937,
+            "offset": 2626
+        },
+        "2017": {
+            "emission": 8899,
+            "offset": 2374
+        },
+        "2018": {
+            "emission": 6258,
+            "offset": 1569
+        },
+        "2019": {
+            "emission": 3384,
+            "offset": 7908
+        },
+        "2020": {
+            "emission": 7949,
+            "offset": 2182
+        },
+        "2021": {
+            "emission": 6560,
+            "offset": 7088
+        },
+        "2022": {
+            "emission": 5247,
+            "offset": 8167
+        },
+        "2023": {
+            "emission": 5587,
+            "offset": 6616
+        }
+    },
+    "aviation": {
+        "2013": {
+            "emission": 4038,
+            "offset": 2278
+        },
+        "2014": {
+            "emission": 4168,
+            "offset": 6684
+        },
+        "2015": {
+            "emission": 4039,
+            "offset": 496
+        },
+        "2016": {
+            "emission": 6396,
+            "offset": 6441
+        },
+        "2017": {
+            "emission": 9416,
+            "offset": 9134
+        },
+        "2018": {
+            "emission": 4115,
+            "offset": 2390
+        },
+        "2019": {
+            "emission": 9182,
+            "offset": 6682
+        },
+        "2020": {
+            "emission": 6797,
+            "offset": 3713
+        },
+        "2021": {
+            "emission": 6791,
+            "offset": 8215
+        },
+        "2022": {
+            "emission": 4155,
+            "offset": 1126
+        },
+        "2023": {
+            "emission": 8098,
+            "offset": 5977
+        }
+    },
+    "forestry": {
+        "2013": {
+            "emission": 4327,
+            "offset": 698
+        },
+        "2014": {
+            "emission": 5797,
+            "offset": 5893
+        },
+        "2015": {
+            "emission": 4712,
+            "offset": 6233
+        },
+        "2016": {
+            "emission": 9477,
+            "offset": 7113
+        },
+        "2017": {
+            "emission": 7794,
+            "offset": 7876
+        },
+        "2018": {
+            "emission": 2883,
+            "offset": 1651
+        },
+        "2019": {
+            "emission": 8510,
+            "offset": 1909
+        },
+        "2020": {
+            "emission": 1513,
+            "offset": 2298
+        },
+        "2021": {
+            "emission": 9780,
+            "offset": 7788
+        },
+        "2022": {
+            "emission": 8171,
+            "offset": 9182
+        },
+        "2023": {
+            "emission": 8077,
+            "offset": 2887
+        }
+    },
+    "industrial": {
+        "2013": {
+            "emission": 6163,
+            "offset": 481
+        },
+        "2014": {
+            "emission": 2883,
+            "offset": 3259
+        },
+        "2015": {
+            "emission": 5084,
+            "offset": 1332
+        },
+        "2016": {
+            "emission": 9199,
+            "offset": 9628
+        },
+        "2017": {
+            "emission": 6718,
+            "offset": 8433
+        },
+        "2018": {
+            "emission": 3831,
+            "offset": 2278
+        },
+        "2019": {
+            "emission": 6241,
+            "offset": 3356
+        },
+        "2020": {
+            "emission": 6320,
+            "offset": 7441
+        },
+        "2021": {
+            "emission": 7207,
+            "offset": 430
+        },
+        "2022": {
+            "emission": 1817,
+            "offset": 5237
+        },
+        "2023": {
+            "emission": 4404,
+            "offset": 5262
+        }
+    },
+    "marine": {
+        "2013": {
+            "emission": 3621,
+            "offset": 5706
+        },
+        "2014": {
+            "emission": 7164,
+            "offset": 9511
+        },
+        "2015": {
+            "emission": 4654,
+            "offset": 1578
+        },
+        "2016": {
+            "emission": 5675,
+            "offset": 2326
+        },
+        "2017": {
+            "emission": 3656,
+            "offset": 9668
+        },
+        "2018": {
+            "emission": 1229,
+            "offset": 7962
+        },
+        "2019": {
+            "emission": 2089,
+            "offset": 5831
+        },
+        "2020": {
+            "emission": 6505,
+            "offset": 7882
+        },
+        "2021": {
+            "emission": 2272,
+            "offset": 5570
+        },
+        "2022": {
+            "emission": 8000,
+            "offset": 6672
+        },
+        "2023": {
+            "emission": 4607,
+            "offset": 5534
+        }
+    },
+    "residential": {
+        "2013": {
+            "emission": 2046,
+            "offset": 4112
+        },
+        "2014": {
+            "emission": 7948,
+            "offset": 1224
+        },
+        "2015": {
+            "emission": 9766,
+            "offset": 440
+        },
+        "2016": {
+            "emission": 8615,
+            "offset": 4447
+        },
+        "2017": {
+            "emission": 7336,
+            "offset": 9649
+        },
+        "2018": {
+            "emission": 1727,
+            "offset": 7338
+        },
+        "2019": {
+            "emission": 4292,
+            "offset": 6839
+        },
+        "2020": {
+            "emission": 1486,
+            "offset": 9791
+        },
+        "2021": {
+            "emission": 1011,
+            "offset": 3082
+        },
+        "2022": {
+            "emission": 1332,
+            "offset": 9235
+        },
+        "2023": {
+            "emission": 2724,
+            "offset": 1349
+        }
+    },
+    "transportation": {
+        "2013": {
+            "emission": 1093,
+            "offset": 9558
+        },
+        "2014": {
+            "emission": 8238,
+            "offset": 1090
+        },
+        "2015": {
+            "emission": 4016,
+            "offset": 1208
+        },
+        "2016": {
+            "emission": 2930,
+            "offset": 7064
+        },
+        "2017": {
+            "emission": 1567,
+            "offset": 4669
+        },
+        "2018": {
+            "emission": 8223,
+            "offset": 8791
+        },
+        "2019": {
+            "emission": 2401,
+            "offset": 547
+        },
+        "2020": {
+            "emission": 9836,
+            "offset": 4198
+        },
+        "2021": {
+            "emission": 5637,
+            "offset": 4728
+        },
+        "2022": {
+            "emission": 3595,
+            "offset": 8260
+        },
+        "2023": {
+            "emission": 6892,
+            "offset": 2205
+        }
+    },
+    "waste": {
+        "2013": {
+            "emission": 5439,
+            "offset": 4961
+        },
+        "2014": {
+            "emission": 9141,
+            "offset": 5922
+        },
+        "2015": {
+            "emission": 8371,
+            "offset": 2939
+        },
+        "2016": {
+            "emission": 8718,
+            "offset": 9404
+        },
+        "2017": {
+            "emission": 1608,
+            "offset": 9790
+        },
+        "2018": {
+            "emission": 4884,
+            "offset": 6139
+        },
+        "2019": {
+            "emission": 5959,
+            "offset": 5499
+        },
+        "2020": {
+            "emission": 4998,
+            "offset": 7832
+        },
+        "2021": {
+            "emission": 5897,
+            "offset": 1205
+        },
+        "2022": {
+            "emission": 7818,
+            "offset": 5028
+        },
+        "2023": {
+            "emission": 5380,
+            "offset": 8280
+        }
+    }
+}
