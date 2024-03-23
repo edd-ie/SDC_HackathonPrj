@@ -8,6 +8,7 @@ import './Dashboard.css'
 
 export default function Dashboard() {
     const [data, setData] = useState([])
+    const [prev, active] = useState()
 
     const dataset = [
         {
@@ -72,7 +73,30 @@ export default function Dashboard() {
         }
     ]
 
+    function handleData(e) {
+        
+        let button = e.target;
+        let name = button.innerText;
+        let idName = button.id;
+        let parent = button.parentElement;
+        for (let i = 0; i < parent.children.length; i++) {
+            parent.children[i].className = "switch"
+        }
+        console.log(name, button.className, idName);
+        button.className = "switch active"
+
+        fetch(`http://localhost:5000/${idName}`)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            setData(data)
+        })
+        
+    }
+
+
     useEffect(() => {
+
         setData(dataset)
     },[])
 
@@ -82,11 +106,11 @@ export default function Dashboard() {
     return (
     <div className="Dashboard">
         <div className="folder">
-            <AreaChart position='relative' width={700} height={250} data={data}
+            <AreaChart className="chart" width={700} height={250} data={data}
             margin={{ top: 10, right: 0, left: 0, bottom: 0 }}>
             <defs>
                 <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8}/>
+                <stop offset="5%" stopColor="#8884d8" stopOpacity={0.9}/>
                 <stop offset="95%" stopColor="#8884d8" stopOpacity={0}/>
                 </linearGradient>
                 <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
@@ -103,16 +127,17 @@ export default function Dashboard() {
             </AreaChart>
             
             <div className="tabs">
-                <div className="switch active">Agriculture</div>
-                <div className="switch">Aviation</div>
-                <div className="switch">Commercial</div>
-                <div className="switch">Energy</div>
-                <div className="switch">Forestry</div>
-                <div className="switch">Industrial</div>
-                <div className="switch">Marine</div>
-                <div className="switch">Residential</div>
-                <div className="switch">Transportation</div>
-                <div className="switch">Waste</div>
+                <div id="total" className="switch active" onClick={handleData} >Total</div>
+                <div id="agriculture" className="switch" onClick={handleData}>Agriculture</div>
+                <div id="aviation" className="switch" onClick={handleData} >Aviation</div>
+                <div id="commercial" className="switch" onClick={handleData} >Commercial</div>
+                <div id="energy" className="switch" onClick={handleData} >Energy</div>
+                <div id="forestry" className="switch" onClick={handleData} >Forestry</div>
+                <div id="industrial" className="switch" onClick={handleData} >Industrial</div>
+                <div id="marine" className="switch" onClick={handleData} >Marine</div>
+                <div id="residential" className="switch" onClick={handleData} >Residential</div>
+                <div id="transportation" className="switch" onClick={handleData} >Transportation</div>
+                <div id="waste" className="switch" onClick={handleData} >Waste</div>
             </div>
         </div>
         
