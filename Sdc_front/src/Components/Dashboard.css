@@ -12,7 +12,7 @@
     position: relative;
     margin-top: 10%;
     margin-left: 15%;
-    width: 80vw;
+    width: 720px;
     height: 70%;
     background: rgb(231, 230, 230);
     display: flex;
@@ -25,7 +25,7 @@
 
 .tabs{
     position: relative;
-    width: 80vw;
+    width: 720px;
     border-top: 1px solid black;
     border-left: 1px solid black;
     background: transparent;
