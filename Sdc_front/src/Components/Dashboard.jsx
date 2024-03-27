@@ -144,7 +144,7 @@ export default function Dashboard() {
         
         {!flip ? 
         <div className="folder">
-            <AreaChart className="chart" width={700} height={250} data={data}
+            <AreaChart className="chart" width={700} height={260} data={data}
             margin={{ top: 10, right: 0, left: 0, bottom: 0 }}>
             <defs>
                 <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
